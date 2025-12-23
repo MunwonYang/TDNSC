@@ -17,7 +17,7 @@ The following R source files implement TDNSC:
 Solves the classification problem and performs variable selection by fitting the Tensor De-correlated Nearest Shrunken Centroid (TDNSC) model.
 
 **Arguments**
-- `X`: Array/list of `n` predictor tensors, each with dimensions \(\mathbb{R}^{p_1 \times \cdots \times p_M}\).
+- `X`: Array/list of `n` predictor tensors, each with dimensions $\(\mathbb{R}^{p_1 \times \cdots \times p_M}\)$.
 - `Y`: Class labels corresponding to each tensor in `X`.
 - `lambda`: User-specified sequence of threshold parameters (optional; default `NULL`).
 - `nlambda`: Number of lambda values to generate if `lambda` is not provided (default `20`).
@@ -38,7 +38,7 @@ Predicts categorical responses on new matrix/tensor data using a fitted TDNSC mo
 
 **Arguments**
 - `model`: Output of a call to `TDNSC.train()`.
-- `X`: Array/list of predictor tensors with dimensions \(\mathbb{R}^{p_1 \times \cdots \times p_M}\).
+- `X`: Array/list of predictor tensors with dimensions $\(\mathbb{R}^{p_1 \times \cdots \times p_M}\)$.
 
 ### `cv.TDNSC()`
 Performs K-fold cross-validation for TDNSC and returns the best threshold value `lambda` from user-specified or automatically generated choices.
@@ -106,7 +106,7 @@ library(rTensor)
 ```
 
 **Model Setting**
-Use `atrans()` from **tensr** to compute class tensor means given class centroids \(\nu_k\) for \(k = 1,\dots,K\):
+Use `atrans()` from **tensr** to compute class tensor means given class centroids $\(\nu_k\)$ for $\(k = 1,\dots,K\)$:
 ```r
 dimen <- c(30, 36, 30)
 K <- 2
