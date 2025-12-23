@@ -44,7 +44,7 @@ Predicts categorical responses on new matrix/tensor data using a fitted TDNSC mo
 Performs K-fold cross-validation for TDNSC and returns the best threshold value `lambda` from user-specified or automatically generated choices.
 
 **Arguments**
-- `X`: Array/list of predictor tensors with dimensions \(\mathbb{R}^{p_1 \times \cdots \times p_M}\).
+- `X`: Array/list of predictor tensors with dimensions $\(\mathbb{R}^{p_1 \times \cdots \times p_M}\)$.
 - `Y`: Class labels.
 - `lambda`: Optional user-specified lambda sequence (default `NULL`). If `NULL`, a sequence is auto-generated and cross-validated.
 - `nlambda`: Number of lambda values if `lambda` is not provided (default `20`).
